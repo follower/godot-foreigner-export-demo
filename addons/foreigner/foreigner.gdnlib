@@ -14,3 +14,7 @@ Server.64="res://addons/foreigner/linux/foreigner.so"
 
 [dependencies]
 
+X11.64=[  ]
+OSX.64=[  ]
+Windows.64=[  ]
+Server.64=[  ]
