@@ -19,9 +19,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 142.0
+margin_top = 51.0
 margin_right = 1024.0
-margin_bottom = 156.0
+margin_bottom = 65.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 alignment = 1
@@ -39,11 +39,112 @@ margin_right = 620.0
 margin_bottom = 14.0
 text = "Unknown"
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 167.0
+margin_right = 1024.0
+margin_bottom = 191.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 238.0
+margin_top = 5.0
+margin_right = 312.0
+margin_bottom = 19.0
+text = "Join Strings:"
+
+[node name="InputString1" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 332.0
+margin_right = 502.0
+margin_bottom = 24.0
+custom_constants/minimum_spaces = 40
+text = "Ban"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 522.0
+margin_top = 5.0
+margin_right = 530.0
+margin_bottom = 19.0
+text = "+"
+
+[node name="InputString2" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 550.0
+margin_right = 720.0
+margin_bottom = 24.0
+custom_constants/minimum_spaces = 40
+text = "ana"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 740.0
+margin_top = 5.0
+margin_right = 748.0
+margin_bottom = 19.0
+text = "="
+
+[node name="LabelResultJoin" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 768.0
+margin_top = 5.0
+margin_right = 786.0
+margin_bottom = 19.0
+text = "???"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_left = 327.0
+margin_top = 242.0
+margin_right = 697.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+size_flags_vertical = 2
+custom_constants/separation = 20
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 88.0
+margin_bottom = 19.0
+text = "Add Numbers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputNumber1" type="SpinBox" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 108.0
+margin_right = 182.0
+margin_bottom = 24.0
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 202.0
+margin_top = 5.0
+margin_right = 210.0
+margin_bottom = 19.0
+text = "+"
+
+[node name="InputNumber2" type="SpinBox" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 230.0
+margin_right = 304.0
+margin_bottom = 24.0
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 324.0
+margin_top = 5.0
+margin_right = 332.0
+margin_bottom = 19.0
+text = "="
+
+[node name="LabelResultAdd" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 352.0
+margin_top = 5.0
+margin_right = 370.0
+margin_bottom = 19.0
+text = "???"
+
 [node name="ButtonRunDemo" type="Button" parent="VBoxContainer"]
 margin_left = 472.0
-margin_top = 302.0
+margin_top = 363.0
 margin_right = 551.0
-margin_bottom = 322.0
+margin_bottom = 383.0
 size_flags_horizontal = 4
 size_flags_vertical = 2
+size_flags_stretch_ratio = 2.0
 text = "Run Demo"
