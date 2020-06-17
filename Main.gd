@@ -22,6 +22,7 @@ var _foreigner = null
 func _ready() -> void:
 
     self._foreigner = load('res://addons/testlib/testlib.gdns').new()
+
     if self._foreigner:
         LABEL_STATUS.text = "Loaded."
 
