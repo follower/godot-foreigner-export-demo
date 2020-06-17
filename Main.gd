@@ -17,6 +17,7 @@ onready var INPUT_NUMBER_2: Range = self.find_node("InputNumber2", true, false)
 
 
 var _foreigner = null
+var _testlib = null
 
 
 func _ready() -> void:
@@ -37,3 +38,12 @@ func _ready() -> void:
     randomize()
     INPUT_NUMBER_1.value = randi() % 99
     INPUT_NUMBER_2.value = randi() % 99
+
+
+func run_demo():
+
+    if not self._testlib:
+
+        var library_path: String = SharedLibrary.testlib[OS.get_name()]
+        library_path = SharedLibrary.testlib._Base_.plus_file(library_path)
+
