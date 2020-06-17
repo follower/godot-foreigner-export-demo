@@ -52,6 +52,10 @@ func run_demo():
         if not self._testlib:
             return
 
+        self._testlib.define('add2i', 'sint32', ['sint32', 'sint32'])
+        self._testlib.define('joinStrings', 'string', ['string', 'string'])
+
+
 
 func _on_ButtonRunDemo_pressed() -> void:
     self.run_demo()
