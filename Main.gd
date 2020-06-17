@@ -23,5 +23,10 @@ func _ready() -> void:
 
     if self._foreigner:
         LABEL_STATUS.text = "Loaded."
+
+        BUTTON_RUN_DEMO.grab_focus()
+
     else:
         LABEL_STATUS.text = "Not loaded."
+
+        BUTTON_RUN_DEMO.disabled = true
