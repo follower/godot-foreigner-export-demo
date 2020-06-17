@@ -148,3 +148,4 @@ size_flags_horizontal = 4
 size_flags_vertical = 2
 size_flags_stretch_ratio = 2.0
 text = "Run Demo"
+[connection signal="pressed" from="VBoxContainer/ButtonRunDemo" to="." method="_on_ButtonRunDemo_pressed"]
