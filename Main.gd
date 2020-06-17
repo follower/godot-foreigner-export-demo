@@ -56,6 +56,11 @@ func run_demo():
         self._testlib.define('joinStrings', 'string', ['string', 'string'])
 
 
+    LABEL_RESULT_ADD.text = "%d" % self._testlib.invoke('add2i', [int(INPUT_NUMBER_1.value), int(INPUT_NUMBER_2.value)])
+
+    LABEL_RESULT_JOIN.text = self._testlib.invoke('joinStrings', [INPUT_STRING_1.text, INPUT_STRING_2.text])
+
+
 
 func _on_ButtonRunDemo_pressed() -> void:
     self.run_demo()
