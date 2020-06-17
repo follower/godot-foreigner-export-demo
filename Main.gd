@@ -47,6 +47,10 @@ func run_demo():
         var library_path: String = SharedLibrary.testlib[OS.get_name()]
         library_path = SharedLibrary.testlib._Base_.plus_file(library_path)
 
+        self._testlib = _foreigner.open(Utils._get_correct_path(library_path))
+
+        if not self._testlib:
+            return
 
 
 func _on_ButtonRunDemo_pressed() -> void:
