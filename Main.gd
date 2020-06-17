@@ -30,3 +30,8 @@ func _ready() -> void:
         LABEL_STATUS.text = "Not loaded."
 
         BUTTON_RUN_DEMO.disabled = true
+
+
+    randomize()
+    INPUT_NUMBER_1.value = randi() % 99
+    INPUT_NUMBER_2.value = randi() % 99
