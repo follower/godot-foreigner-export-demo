@@ -13,10 +13,16 @@ _global_script_classes=[ {
 "class": "SharedLibrary",
 "language": "GDScript",
 "path": "res://SharedLibrary.gd"
+}, {
+"base": "Reference",
+"class": "Utils",
+"language": "GDScript",
+"path": "res://Utils.gd"
 } ]
 _global_script_class_icons={
 
 "SharedLibrary": "",
+"Utils": ""
 }
 
 [application]
