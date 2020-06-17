@@ -16,11 +16,12 @@ onready var INPUT_NUMBER_1: Range = self.find_node("InputNumber1", true, false)
 onready var INPUT_NUMBER_2: Range = self.find_node("InputNumber2", true, false)
 
 
-var _foreigner = preload('res://addons/foreigner/foreigner.gdns').new()
+var _foreigner = null
 
 
 func _ready() -> void:
 
+    self._foreigner = load('res://addons/foreigner/foreigner.gdns').new()
     if self._foreigner:
         LABEL_STATUS.text = "Loaded."
 
