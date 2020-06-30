@@ -15,6 +15,13 @@
 
 # TODO: Reimplement in GDScript? (I mean I *guess* I could've started with bash.)
 
+# Other package/exporter projects:
+#
+#  * <https://github.com/firebelley/godot-export> (CI Action)
+#
+#  * <https://chibifire.com/posts/2019-07-20-gravity/>
+#
+
 import os
 import glob
 import subprocess
