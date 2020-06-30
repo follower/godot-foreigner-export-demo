@@ -68,7 +68,7 @@ def export_with_preset(export_config, godot_instance):
 
     # TODO: Make this a method of GodotExecutable?
 
-    export_output_directory_no_bump = os.path.join(export_config.output_base_dir, export_config.platform.lower(), "v%s" % (export_config.version))
+    export_output_directory_no_bump = os.path.join(export_config.output_base_dir, export_config.platform.lower(), export_config.template,  "v%s" % (export_config.version))
 
     if os.path.exists(export_output_directory_no_bump):
 
