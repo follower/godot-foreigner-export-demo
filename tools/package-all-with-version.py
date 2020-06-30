@@ -41,7 +41,7 @@ class GodotExecutable:
         # TODO: Support headless & no-window.
         # TODO: Support release template.
 
-        return [self.file_path, "--windowed", "--resolution", "160x160", "--export-debug", export_config.preset_name , export_config.output_file_path]
+        return [self.file_path, "--windowed", "--resolution", "160x160", "--export%s" % export_config._template, export_config.preset_name , export_config.output_file_path]
 
 
     def export_dry_run(self, export_config):
@@ -89,7 +89,13 @@ def export_with_preset(export_config, godot_instance):
 
     os.makedirs(export_output_directory) # TODO: Don't error out if the directory exists but is empty to avoid wasting directories on failed exports?
 
-    export_file_name = "{base_name}-{platform}-v{version}{revision_bump}.{extension}".format_map(export_config.__dict__) # TODO: Handle map properly.
+    # TODO: Handle less hackily?
+    if export_config.template == "release":
+        export_config._template = ""
+    else:
+        export_config._template = "-debug"
+
+    export_file_name = "{base_name}-{platform}{_template}-v{version}{revision_bump}.{extension}".format_map(export_config.__dict__) # TODO: Handle map properly.
 
     export_config.output_file_path = os.path.join(export_output_directory, export_file_name)
 
@@ -161,10 +167,15 @@ if __name__=="__main__":
           export_config_for_preset.project_name = export_base_name # TODO: Handle properly.
           export_config_for_preset.revision_bump = "" # TODO: Handle properly?
 
-          export_config_for_preset.template = "release" # TODO: Handle properly.
+          export_config_for_preset.template = "debug" # TODO: Handle properly.
 
 
           export_with_preset(export_config_for_preset, godot)
+
+
+          export_config_for_preset.template = "release" # TODO: Handle properly.
+          export_with_preset(export_config_for_preset, godot)
+
 
           # TODO: Add automatic archive creation where required.
 
