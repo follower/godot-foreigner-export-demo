@@ -8,12 +8,16 @@ onready var BUTTON_RUN_DEMO: Button = self.find_node("ButtonRunDemo", true, fals
 
 onready var LABEL_RESULT_JOIN: Label = self.find_node("LabelResultJoin", true, false)
 onready var LABEL_RESULT_ADD: Label = self.find_node("LabelResultAdd", true, false)
+onready var LABEL_RESULT_MSG: Label = self.find_node("LabelResultMessage", true, false)
 
 onready var INPUT_STRING_1: LineEdit = self.find_node("InputString1", true, false)
 onready var INPUT_STRING_2: LineEdit = self.find_node("InputString2", true, false)
 
 onready var INPUT_NUMBER_1: Range = self.find_node("InputNumber1", true, false)
 onready var INPUT_NUMBER_2: Range = self.find_node("InputNumber2", true, false)
+
+onready var INPUT_MSG_OFFSET: Range = self.find_node("InputMsgOffset", true, false)
+onready var INPUT_MSG_LENGTH: Range = self.find_node("InputMsgLength", true, false)
 
 
 var _foreigner = null
