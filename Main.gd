@@ -58,12 +58,20 @@ func run_demo():
 
         self._testlib.define('add2i', 'sint32', ['sint32', 'sint32'])
         self._testlib.define('joinStrings', 'string', ['string', 'string'])
+        self._testlib.define('getMessage', 'pointer', []) # Actually 'string' but we want to do pointer manipulation.
 
 
     LABEL_RESULT_ADD.text = "%d" % self._testlib.invoke('add2i', [int(INPUT_NUMBER_1.value), int(INPUT_NUMBER_2.value)])
 
     LABEL_RESULT_JOIN.text = self._testlib.invoke('joinStrings', [INPUT_STRING_1.text, INPUT_STRING_2.text])
 
+    var msg_ptr = self._testlib.invoke('getMessage', [])
+
+    if msg_ptr != 0:
+        var _op = _foreigner.new_buffer(8) # Workaround for lack of static class methods.
+        LABEL_RESULT_MSG.text = _op.string_at(_op.offset(msg_ptr, int(INPUT_MSG_OFFSET.value)), int(INPUT_MSG_LENGTH.value))
+    else:
+        LABEL_RESULT_MSG.text = "Pointer was: 0x%08x" % msg_ptr
 
 
 func _on_ButtonRunDemo_pressed() -> void:
