@@ -19,9 +19,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 51.0
+margin_top = 41.0
 margin_right = 1024.0
-margin_bottom = 65.0
+margin_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 alignment = 1
@@ -40,9 +40,9 @@ margin_bottom = 14.0
 text = "Unknown"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 167.0
+margin_top = 137.0
 margin_right = 1024.0
-margin_bottom = 191.0
+margin_bottom = 161.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_constants/separation = 20
@@ -92,11 +92,11 @@ text = "???"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 margin_left = 327.0
-margin_top = 242.0
+margin_top = 238.0
 margin_right = 697.0
-margin_bottom = 266.0
+margin_bottom = 262.0
 size_flags_horizontal = 6
-size_flags_vertical = 2
+size_flags_vertical = 6
 custom_constants/separation = 20
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer3"]
@@ -139,13 +139,66 @@ margin_right = 370.0
 margin_bottom = 19.0
 text = "???"
 
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_left = 244.0
+margin_top = 339.0
+margin_right = 780.0
+margin_bottom = 363.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/separation = 20
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4"]
+margin_top = 5.0
+margin_right = 218.0
+margin_bottom = 19.0
+text = "Reveal Secret Message:       offset:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputMsgOffset" type="SpinBox" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 238.0
+margin_right = 312.0
+margin_bottom = 24.0
+max_value = 5.0
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 332.0
+margin_top = 5.0
+margin_right = 376.0
+margin_bottom = 19.0
+text = "length:"
+
+[node name="InputMsgLength" type="SpinBox" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 396.0
+margin_right = 470.0
+margin_bottom = 24.0
+min_value = 1.0
+max_value = 7.0
+value = 5.0
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 490.0
+margin_top = 5.0
+margin_right = 498.0
+margin_bottom = 19.0
+text = "="
+
+[node name="LabelResultMessage" type="Label" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 518.0
+margin_top = 5.0
+margin_right = 536.0
+margin_bottom = 19.0
+text = "???"
+
 [node name="ButtonRunDemo" type="Button" parent="VBoxContainer"]
 margin_left = 472.0
-margin_top = 363.0
+margin_top = 492.0
 margin_right = 551.0
-margin_bottom = 383.0
+margin_bottom = 512.0
 size_flags_horizontal = 4
-size_flags_vertical = 2
+size_flags_vertical = 6
 size_flags_stretch_ratio = 2.0
 text = "Run Demo"
 [connection signal="pressed" from="VBoxContainer/ButtonRunDemo" to="." method="_on_ButtonRunDemo_pressed"]
